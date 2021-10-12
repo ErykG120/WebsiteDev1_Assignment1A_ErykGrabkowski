@@ -1,0 +1,186 @@
+/* The box-sizing CSS property sets how the total width and height of an element is calculated */
+
+* {
+	box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	margin: 0;
+}
+
+/* Title */
+
+.header {
+	padding: 10px;
+	text-align: center;
+	background: #95adbc;
+	color: #ffffff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.header h1 {
+	font-size: 35px;
+}
+
+/* Navigation Bar */
+
+.navbar {
+	overflow: hidden;
+	background-color: #4d4d4d;
+}
+
+/* Link Styling */
+
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Move Links To Right */
+
+.navbar a.right {
+	float: right;
+}
+
+/* Change On Hover */
+
+.navbar a:hover {
+	background-color: #ddd;
+}
+
+/* Column container */
+.row {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+.side {
+	flex: 30%;
+	background-color: #dbd4d4;
+	padding: 20px;
+}
+
+/* Main column */
+.main {
+	flex: 70%;
+	flex: 70%;
+	background-color: white;
+	padding: 20px;
+}
+
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd
+}
+
+/* Table Start */
+table {
+	margin: 5% auto;
+	border-collapse: collapse;
+}
+
+th, td {
+	border-left: 1px solid #336633;
+	border-right: 1px solid #336633;
+	border-top: 1px solid #336633;
+	border-bottom: 1px solid #336633;
+	padding: .4em;
+}
+
+caption {
+	color: #000066;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: .5em;
+}
+
+thead {
+	background-color: #339933;
+	color: #ffffff;
+}
+
+tbody td {
+	text-align: left;
+}
+
+td:last-of-type {
+	font-style: italic;
+    font-weight: bold;
+    color: orangered;
+}
+
+th:first-of-type {
+	text-align: left;
+}
+
+tbody {
+	background-color: #339933;
+}
+
+tbody:hover {
+	background-color: #339933;
+}
+
+tbody tr:nth-of-type(even)
+/* represents every even element */
+
+	{
+	background-color: #88ee88;
+}
+
+tbody tr:nth-of-type(odd)
+/* represents every odd element */
+
+	{
+	background-color: #99ff99;
+}
+/* Table End */
+
+ol em {
+	color: #b100ff;
+}
+
+/* Links */
+
+a:hover {
+	color: #000000;
+}
+
+/* ID */
+#special {
+	color: #5800ff;
+	text-decoration: underline
+}
+
+iframe {
+border: 0px
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column;
+	}
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+	.navbar a {
+		float: none;
+		width: 100%;
+	}
+}
